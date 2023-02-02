@@ -11,7 +11,7 @@ var (
 
 // displayLoadingWithMessage Display a loading icon forever until the `notify` is changed to true
 func displayLoadingWithMessage(message string, delayRate time.Duration, notifyNoLoadingBool *bool) {
-	message += " "
+	message = " " + message
 	for {
 		if *notifyNoLoadingBool {
 			break

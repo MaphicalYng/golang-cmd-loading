@@ -9,13 +9,13 @@ func SetDelayRate(delayRateNew time.Duration) {
 }
 
 // WithLoading Start a job in a new goroutine, and display a loading icon during the execution of the job.
-func WithLoading(job func(func())) {
+func WithLoading(job func(cancelLoading func())) {
 	WithLoadingMessage(job, "")
 }
 
 // WithLoadingMessage Start a job in a new goroutine, and display a loading icon with the provided message
 // during the execution of the job.
-func WithLoadingMessage(job func(func()), message string) {
+func WithLoadingMessage(job func(cancelLoading func()), message string) {
 	var (
 		cancelLoading = false
 		joinChannel   = make(chan int)
