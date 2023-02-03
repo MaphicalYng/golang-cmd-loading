@@ -84,3 +84,9 @@ You can use the given values, including:
 * `DelayRateFast`(130 ms)
 
 Or you can just set a customized value of type `time.Duration`.
+
+## Output
+
+Loading with a customized message: "Computing..."
+
+![](https://my-storage-1252772533.cos.ap-nanjing.myqcloud.com/GITHUB/github_readme_golang_cmd_loading.gif)
