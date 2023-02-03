@@ -2,6 +2,7 @@ package golang_cmd_loading
 
 import (
 	"fmt"
+	"strings"
 	"time"
 )
 
@@ -48,13 +49,13 @@ func displayLoadingWithMessage(message string, delayRate time.Duration, notifyNo
 	}
 }
 
-func clearCurrentLineSub() {
-	fmt.Printf("\r          \r")
+func clearCurrentLineSub(messageLength int) {
+	fmt.Printf("\r  %s\r", strings.Repeat(" ", messageLength))
 }
 
 // notifyNoLoading Cancel loading status
-func notifyNoLoading(notifyNoLoadingBool *bool, delayRate time.Duration) {
+func notifyNoLoading(notifyNoLoadingBool *bool, delayRate time.Duration, messageLength int) {
 	*notifyNoLoadingBool = true
 	time.Sleep(delayRate + 50*time.Millisecond)
-	clearCurrentLineSub()
+	clearCurrentLineSub(messageLength)
 }

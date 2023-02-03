@@ -23,7 +23,7 @@ func WithLoadingMessage(job func(cancelLoading func()), message string) {
 	// Start the job first
 	go func() {
 		job(func() {
-			notifyNoLoading(&cancelLoading, delayRate)
+			notifyNoLoading(&cancelLoading, delayRate, len(message))
 		})
 		// Notify main goroutine all the jobs are done, it's time to end
 		joinChannel <- 1
