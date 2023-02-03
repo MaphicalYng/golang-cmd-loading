@@ -89,4 +89,4 @@ Or you can just set a customized value of type `time.Duration`.
 
 Loading with a customized message: "Computing..."
 
-![](https://my-storage-1252772533.cos.ap-nanjing.myqcloud.com/GITHUB/github_readme_golang_cmd_loading.gif)
+![](https://my-storage-1252772533.cos.ap-nanjing.myqcloud.com/GITHUB/github_readme_golang_cmd_loading_1.gif)
